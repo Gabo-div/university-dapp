@@ -1,3 +1,11 @@
 packages:
-  - "apps/*"
-  - "packages/*"
+  - apps/*
+  - packages/*
+
+onlyBuiltDependencies:
+  - '@arbitrum/nitro-contracts'
+  - '@tailwindcss/oxide'
+  - esbuild
+  - keccak
+  - secp256k1
+  - unrs-resolver
