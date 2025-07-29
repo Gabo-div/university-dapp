@@ -11,11 +11,12 @@
     }
   },
   "scripts": {
-    "dev": "pnpm run db:clean && tsx watch src/index.ts",
+    "dev": "pnpm run db:push && pnpm run db:clean && tsx watch src/index.ts",
     "build": "rm -rf dist && bun ./build.ts",
     "start": "node dist/index.js",
     "lint": "oxlint && eslint",
-    "db:clean": "tsx src/db/clean.ts"
+    "db:clean": "tsx src/db/clean.ts",
+    "db:push": "drizzle-kit push"
   },
   "dependencies": {
     "@hono/node-server": "^1.14.4",
